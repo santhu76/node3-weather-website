@@ -12,7 +12,7 @@ const forecast = (lat,long,callback)=>{
         }
         else{
             callback(undefined,{
-                description : body.daily.data[0].summary + '. It is currently '+ body.currently.temperature + ' degrees out. There is a '+ body.currently.precipProbability + '% chance of rain'
+                description : body.daily.data[0].summary + ', humidity : '+ body.daily.data[0].humidity + '. It is currently '+ body.currently.temperature + ' degrees out. There is a '+ body.currently.precipProbability + '% chance of rain'
             })
         }
     })
