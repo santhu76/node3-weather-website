@@ -9,6 +9,8 @@ console.log(__filename)
 console.log(path.join(__dirname,'../public'))
 const app = express()
 
+const port = process.env.PORT || 3000
+
 //This is for express to look for static file
 const publicDirectoryPath = path.join(__dirname,'../public')
 
@@ -104,7 +106,7 @@ app.get('*',(req,res)=>{
         errormessage : 'Page Not Found'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server is up on 3000')
+app.listen(port,()=>{
+    console.log('Server is up on ' + port)
 })
 
